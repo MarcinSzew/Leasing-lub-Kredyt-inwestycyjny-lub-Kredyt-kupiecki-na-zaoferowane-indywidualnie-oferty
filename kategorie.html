@@ -1,55 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="pl">
 <head>
+
 <meta charset="UTF-8">
+
 <title>Kategorie produktów</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f5f5f5;
+margin:0;
+}
+
+header{
+background:#1a3e5c;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+padding:30px;
+}
+
+.category{
+background:white;
+padding:15px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search{
+text-align:center;
+margin-top:20px;
+}
+
+form{
+margin-top:30px;
+background:white;
+padding:20px;
+max-width:500px;
+margin:auto;
+}
+
+</style>
+
+<script>
+
+function rata(){
+
+let cena=document.getElementById("cena").value
+
+let wynik=(cena/12).toFixed(2)
+
+alert("Rata miesięczna: "+wynik+" zł")
+
+}
+
+</script>
+
 </head>
 
 <body>
 
-<h1>37 kategorii produktów</h1>
+<header>
 
-<ol>
+<h1>Kategorie produktów</h1>
 
-<li>Laptopy gamingowe</li>
-<li>Komputery stacjonarne</li>
-<li>Serwery</li>
-<li>Tablety</li>
-<li>Smartfony</li>
-<li>Monitory</li>
-<li>Karty graficzne</li>
-<li>Drukarki</li>
-<li>Oprogramowanie</li>
-<li>Narzędzia akumulatorowe</li>
-<li>Narzędzia stolarskie</li>
-<li>Elektronarzędzia przemysłowe</li>
-<li>Maszyny warsztatowe</li>
-<li>Motocykle sportowe</li>
-<li>Motocykle turystyczne</li>
-<li>Pojazdy elektryczne</li>
-<li>Sprzęt DJ</li>
-<li>Miksery DJ</li>
-<li>Gramofony</li>
-<li>Kontrolery DJ</li>
-<li>Kontrolery MIDI</li>
-<li>Syntezatory</li>
-<li>Sprzęt studyjny</li>
-<li>Mikrofony</li>
-<li>Słuchawki</li>
-<li>Kamery</li>
-<li>Aparaty fotograficzne</li>
-<li>Drony</li>
-<li>Serwery danych</li>
-<li>Systemy chmurowe</li>
-<li>VR</li>
-<li>AI hardware</li>
-<li>AI software</li>
-<li>Systemy ERP</li>
-<li>Systemy CRM</li>
-<li>Automatyka przemysłowa</li>
-<li>Robotyka</li>
+<a href="index.html" style="color:white">Powrót do strony głównej</a>
 
-</ol>
+</header>
+
+<div class="search">
+
+<h2>Wyszukaj produkt</h2>
+
+<input type="text" placeholder="np. Lenovo, Nubia, Dell">
+
+</div>
+
+<section class="categories">
+
+<div class="category">1 Smartfony Nubia Redmagic</div>
+<div class="category">2 Smartfony Vivo</div>
+<div class="category">3 Smartfony Xiaomi</div>
+<div class="category">4 Smartfony Huawei</div>
+<div class="category">5 Smartfony Samsung</div>
+<div class="category">6 Smartfony Pova</div>
+<div class="category">7 Smartfony Camon</div>
+
+<div class="category">8 Laptopy Lenovo</div>
+<div class="category">9 Laptopy Dell</div>
+<div class="category">10 Laptopy HP</div>
+<div class="category">11 Laptopy MSI</div>
+<div class="category">12 Laptopy ASUS ROG</div>
+<div class="category">13 Laptopy Alienware</div>
+
+<div class="category">14 Stacje robocze mobilne</div>
+<div class="category">15 Stacje robocze stacjonarne</div>
+
+<div class="category">16 Komputery All-in-One</div>
+<div class="category">17 Komputery stacjonarne</div>
+<div class="category">18 Komputery gamingowe</div>
+
+<div class="category">19 Monitory profesjonalne</div>
+<div class="category">20 Monitory gamingowe</div>
+
+<div class="category">21 Akcesoria komputerowe</div>
+<div class="category">22 Klawiatury</div>
+<div class="category">23 Myszy</div>
+<div class="category">24 Słuchawki</div>
+
+<div class="category">25 Karty graficzne</div>
+<div class="category">26 Procesory</div>
+<div class="category">27 Pamięci RAM</div>
+<div class="category">28 Dyski SSD</div>
+
+<div class="category">29 Serwery</div>
+<div class="category">30 Sprzęt sieciowy</div>
+<div class="category">31 Routery</div>
+<div class="category">32 Switch</div>
+
+<div class="category">33 Drukarki</div>
+<div class="category">34 Skanery</div>
+
+<div class="category">35 Elektronika użytkowa</div>
+<div class="category">36 Sprzęt mobilny</div>
+<div class="category">37 Projekty technologiczne Premium</div>
+
+</section>
+
+<form>
+
+<h3>Dodaj ofertę</h3>
+
+<input type="text" placeholder="Nazwa produktu"><br><br>
+
+<input type="number" id="cena" placeholder="Cena"><br><br>
+
+<textarea placeholder="Opis produktu"></textarea><br><br>
+
+<button type="button" onclick="rata()">Oblicz ratę</button>
+
+</form>
 
 </body>
 </html>
