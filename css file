@@ -1,0 +1,26 @@
+#premium-catalog{
+padding:40px;
+background:#f3f5f8;
+}
+
+.shop-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:25px;
+}
+
+.product{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.product h3{
+margin-top:0;
+}
+
+.price{
+font-weight:bold;
+color:#0b2d4a;
+font-size:18px;
