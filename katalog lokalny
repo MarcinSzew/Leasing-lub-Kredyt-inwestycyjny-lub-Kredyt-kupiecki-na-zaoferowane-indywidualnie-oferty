@@ -1,2 +1,2 @@
-git clone https://github.com/marcinszew/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty.git
-cd Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty
+git add .
+git commit -m "Dodanie portalu Premium z 37 kategoriami i szablonami produktów"
