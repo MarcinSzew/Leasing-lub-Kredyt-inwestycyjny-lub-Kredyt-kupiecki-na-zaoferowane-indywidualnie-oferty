@@ -1,1 +1,5 @@
-01-smartfony-nubia-redmagic.html
+repozytorium/
+├─ index.html  ← tutaj wklejasz nowy plik
+├─ images/     ← tutaj trzymasz zdjęcia produktów
+├─ css/        ← jeśli chcesz oddzielny plik CSS
+├─ js/         ← jeśli chcesz oddzielny plik JS
