@@ -1,13 +1,147 @@
+
 <!DOCTYPE html>
+
 <html lang="pl">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Premium IT Store</title>
+<title>Portal Premium IT</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#0f2942;
+color:white;
+padding:20px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin-right:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.hero{
+background:#1a3e5c;
+color:white;
+padding:60px;
+text-align:center;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.product{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.product h3{
+color:#1a3e5c;
+}
+
+.price{
+color:#c0392b;
+font-weight:bold;
+}
+
+button{
+background:#1a3e5c;
+color:white;
+border:none;
+padding:10px;
+margin-top:10px;
+cursor:pointer;
+border-radius:4px;
+}
+
+button:hover{
+background:#0f2942;
+}
+
+.categories{
+background:white;
+padding:40px;
+}
+
+.categories h2{
+text-align:center;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.category{
+background:#f2f2f2;
+padding:15px;
+border-radius:6px;
+}
+
+.contact{
+background:#ffffff;
+padding:40px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+footer{
+background:#0f2942;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+function rata(){
+
+let cena=document.getElementById("cena").value
+
+let raty=12
+
+let wynik=(cena/raty).toFixed(2)
+
+alert("Przybliżona rata miesięczna: "+wynik+" zł")
+
+}
+
+</script>
 
 </head>
 
@@ -15,29 +149,23 @@
 
 <header>
 
-<h1>Premium IT Store</h1>
+<h1>Portal Technologiczny Premium</h1>
 
 <nav>
 
-<a href="index.html">Start</a>
-<a href="kategorie/01-smartfony.html">Smartfony</a>
-<a href="kategorie/02-laptopy.html">Laptopy</a>
-<a href="kategorie/03-stacje-robocze.html">Stacje robocze</a>
-<a href="kategorie/04-komputery.html">Komputery</a>
-<a href="kategorie/05-monitory.html">Monitory</a>
+<a href="index.html">Strona główna</a> <a href="kategorie/index.html">Kategorie produktów</a>
 
 </nav>
 
 </header>
 
-
 <section class="hero">
 
-<h2>Oferta Premium</h2>
-<p>Najlepszy sprzęt technologiczny klasy Premium</p>
+<h2>Sprzęt IT klasy Premium</h2>
+
+<p>Smartfony gamingowe • Laptopy • Stacje robocze • Komputery • Elektronika użytkowa</p>
 
 </section>
-
 
 <section class="products">
 
@@ -46,60 +174,125 @@
 <h3>Nubia Redmagic Gaming</h3>
 
 <p>Snapdragon 8 Elite</p>
+
 <p>16-24GB RAM</p>
+
 <p>512GB / 1TB</p>
 
 <p class="price">Cena: edytuj</p>
 
-<button onclick="raty()">Oblicz ratę</button>
+<button onclick="rata()">Oblicz ratę</button>
 
 </div>
-
 
 <div class="product">
 
-<h3>Lenovo ThinkPad Workstation</h3>
+<h3>Laptop Lenovo ThinkPad</h3>
 
-<p>Intel i9</p>
+<p>Intel Core i9</p>
+
 <p>32GB RAM</p>
-<p>RTX GPU</p>
+
+<p>SSD 1TB</p>
 
 <p class="price">Cena: edytuj</p>
 
-<button onclick="raty()">Oblicz ratę</button>
+<button onclick="rata()">Oblicz ratę</button>
+
+</div>
+
+<div class="product">
+
+<h3>Dell Precision Workstation</h3>
+
+<p>Profesjonalna stacja robocza</p>
+
+<p>Xeon / RTX</p>
+
+<p>64GB RAM</p>
+
+<p class="price">Cena: edytuj</p>
+
+<button onclick="rata()">Oblicz ratę</button>
 
 </div>
 
 </section>
 
+<section class="categories">
 
-<section class="kontakt">
+<h2>37 kategorii produktów</h2>
 
-<h2>Kontakt</h2>
+<div class="category-grid">
 
-<form id="form">
+<div class="category">Smartfony Nubia Redmagic</div>
+<div class="category">Smartfony Vivo</div>
+<div class="category">Smartfony Xiaomi</div>
+<div class="category">Smartfony Huawei</div>
+<div class="category">Smartfony Samsung</div>
 
-<input type="text" placeholder="Imię" required>
+<div class="category">Laptopy Lenovo</div>
+<div class="category">Laptopy Dell</div>
+<div class="category">Laptopy HP</div>
+<div class="category">Laptopy MSI</div>
+<div class="category">Laptopy ASUS ROG</div>
 
-<input type="email" placeholder="Email" required>
+<div class="category">Stacje robocze mobilne</div>
+<div class="category">Stacje robocze stacjonarne</div>
 
-<textarea placeholder="Wiadomość"></textarea>
+<div class="category">Komputery All-in-One</div>
+<div class="category">Komputery stacjonarne</div>
+<div class="category">Komputery gamingowe</div>
 
-<button type="submit">Wyślij</button>
+<div class="category">Monitory profesjonalne</div>
+<div class="category">Monitory gamingowe</div>
 
-</form>
+<div class="category">Akcesoria komputerowe</div>
+<div class="category">Klawiatury</div>
+<div class="category">Myszy</div>
+<div class="category">Słuchawki</div>
+
+<div class="category">Karty graficzne</div>
+<div class="category">Procesory</div>
+<div class="category">Pamięci RAM</div>
+<div class="category">Dyski SSD</div>
+
+<div class="category">Serwery</div>
+<div class="category">Sprzęt sieciowy</div>
+<div class="category">Routery</div>
+<div class="category">Switch</div>
+
+<div class="category">Drukarki</div>
+<div class="category">Skanery</div>
+
+<div class="category">Elektronika użytkowa</div>
+<div class="category">Sprzęt mobilny</div>
+
+<div class="category">Projekty technologiczne Premium</div>
+
+</div>
 
 </section>
 
+<section class="contact">
+
+<h2>Formularz kontaktowy</h2>
+
+<input type="text" placeholder="Imię">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Treść wiadomości"></textarea>
+
+<button>Wyślij</button>
+
+</section>
 
 <footer>
 
-<p>Premium IT Store © 2026</p>
+Portal technologiczno-finansowy Premium
 
 </footer>
-
-
-<script src="script.js"></script>
 
 </body>
 </html>
