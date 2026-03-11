@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>
-https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/
-</loc>
-<priority>1.0</priority>
-</url>
-
-<url>
-<loc>
-https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/kategorie.html
-</loc>
-</url>
-
-<url>
-<loc>
-https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/oferty.html
-</loc>
-</url>
-
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#IT-i-komputery</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Smartfony-i-tablety</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- Dodaj kolejne kategorie w tym samym stylu -->
 </urlset>
