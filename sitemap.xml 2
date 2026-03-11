@@ -1,42 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Strona główna -->
-  <url>
-    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Sklep / katalog Premium -->
-  <url>
-    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#shop</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Produkty Premium -->
-  <url>
-    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Redmagic-10-Pro</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#ThinkPad-X1-Carbon</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Dell-Precision-15</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+<url><loc>https://marcinszew.github.io/index.html</loc><priority>1.0</priority></url>
+<url><loc>https://marcinszew.github.io/kategorie/01-smartfony-nubia-redmagic.html</loc><priority>0.9</priority></url>
+<url><loc>https://marcinszew.github.io/kategorie/02-smartfony-vivo.html</loc><priority>0.9</priority></url>
+<!-- Dodaj wszystkie pozostałe podstrony do 37 -->
 </urlset>
