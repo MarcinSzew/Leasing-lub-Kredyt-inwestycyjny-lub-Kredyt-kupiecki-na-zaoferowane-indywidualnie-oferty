@@ -1,46 +1,6 @@
-kategorie/01-smartfony.html
-<!DOCTYPE html>
-<html lang="pl">
-
-<head>
-
-<meta charset="UTF-8">
-
-<title>Kategoria</title>
-
-<link rel="stylesheet" href="../style.css">
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Kategoria produktów</h1>
-
-<nav>
-
-<a href="../index.html">Strona główna</a>
-
-</nav>
-
-</header>
-
-<section class="products">
-
-<div class="product">
-
-<h3>Produkt</h3>
-
-<p>Parametry</p>
-
-<p class="price">Cena: edytuj</p>
-
-<button onclick="alert('kalkulator rat')">Oblicz ratę</button>
-
-</div>
-
-</section>
-
-</body>
-</html>
+repozytorium/
+├─ index.html
+├─ kategorie/
+│   ├─ 01-smartfony.html
+│   ├─ 02-laptopy.html
+│   └─ ... kolejne 37 kategorii
