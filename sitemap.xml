@@ -3,8 +3,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://twojadomena.pl/</loc>
+<loc>
+https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/
+</loc>
 <priority>1.0</priority>
+</url>
+
+<url>
+<loc>
+https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/kategorie.html
+</loc>
+</url>
+
+<url>
+<loc>
+https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/oferty.html
+</loc>
 </url>
 
 </urlset>
