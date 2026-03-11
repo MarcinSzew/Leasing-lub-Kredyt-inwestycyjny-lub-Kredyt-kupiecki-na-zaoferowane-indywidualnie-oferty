@@ -1,22 +1,12 @@
-index.html
-↓
-STRONA GŁÓWNA
-
-/oferty.html
-↓
-Katalog ofert Premium
-
-/dodaj-oferte.html
-↓
-Panel dodawania ofert
-
-/kalkulator.html
-↓
-Kalkulator leasingu / rat
-
-/kontakt.html
-↓
-Formularz kontaktowy
-
-/css/style.css
-/js/script.js
+root/
+│ index.html                 ← Strona startowa portalowa
+│ sitemap.xml                ← Mapa strony XML
+│ style.css                  ← Główny CSS (dla całej strony)
+│ script.js                  ← JS dla formularza i kalkulatora rat
+│ images/                    ← Zdjęcia produktów
+│ kategorie/                 ← Wszystkie 37 kategorii
+│   ├─ 01-smartfony-nubia-redmagic.html
+│   ├─ 02-smartfony-vivo.html
+│   ├─ 03-smartfony-xiaomi.html
+│   ├─ ...
+│   └─ 37-akcesoria-komputerowe.html
