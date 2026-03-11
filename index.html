@@ -33,13 +33,56 @@
         .offer p {
             margin: 5px 0;
         }
+        button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        #categories {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        #categories ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #categories li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer p, footer a {
+            color: white;
+            margin: 5px 0;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Oferty Finansowe</h1>
         <p>Leasing, kredyt inwestycyjny i kredyt kupiecki – indywidualnie dopasowane oferty</p>
+        <button onclick="toggleCategories()">Kategorie</button>
     </header>
+
     <main>
         <div class="offer">
             <h2>Leasing</h2>
@@ -53,6 +96,63 @@
             <h2>Kredyt Kupiecki</h2>
             <p>Opis kredytu kupieckiego – finansowanie zakupów od kontrahentów.</p>
         </div>
+
+        <div id="categories">
+            <h2>Dostępne Kategorie</h2>
+            <ul>
+                <li>Kategoria 1</li>
+                <li>Kategoria 2</li>
+                <li>Kategoria 3</li>
+                <li>Kategoria 4</li>
+                <li>Kategoria 5</li>
+                <li>Kategoria 6</li>
+                <li>Kategoria 7</li>
+                <li>Kategoria 8</li>
+                <li>Kategoria 9</li>
+                <li>Kategoria 10</li>
+                <li>Kategoria 11</li>
+                <li>Kategoria 12</li>
+                <li>Kategoria 13</li>
+                <li>Kategoria 14</li>
+                <li>Kategoria 15</li>
+                <li>Kategoria 16</li>
+                <li>Kategoria 17</li>
+                <li>Kategoria 18</li>
+                <li>Kategoria 19</li>
+                <li>Kategoria 20</li>
+                <li>Kategoria 21</li>
+                <li>Kategoria 22</li>
+                <li>Kategoria 23</li>
+                <li>Kategoria 24</li>
+                <li>Kategoria 25</li>
+                <li>Kategoria 26</li>
+                <li>Kategoria 27</li>
+                <li>Kategoria 28</li>
+                <li>Kategoria 29</li>
+                <li>Kategoria 30</li>
+                <li>Kategoria 31</li>
+                <li>Kategoria 32</li>
+                <li>Kategoria 33</li>
+                <li>Kategoria 34</li>
+                <li>Kategoria 35</li>
+                <li>Kategoria 36</li>
+                <li>Kategoria 37</li>
+            </ul>
+        </div>
     </main>
+
+    <footer>
+        <h2>Kontakt</h2>
+        <p>Osoba do kontaktu: <strong>Marcin Szewczyk</strong></p>
+        <p>Email: <a href="mailto:profesja.premium@gmail.com">profesja.premium@gmail.com</a></p>
+        <p>Telefon: <a href="tel:+48886636981">+48 88 66 36 981</a></p>
+    </footer>
+
+    <script>
+        function toggleCategories() {
+            const cat = document.getElementById('categories');
+            cat.style.display = (cat.style.display === 'none' || cat.style.display === '') ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
