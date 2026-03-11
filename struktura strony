@@ -1,11 +1,22 @@
-GitHub Pages
-
 index.html
 ↓
 STRONA GŁÓWNA
-https://marcinszew.github.io/
 
+/oferty.html
 ↓
+Katalog ofert Premium
 
-OFERTA PREMIUM
-https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/
+/dodaj-oferte.html
+↓
+Panel dodawania ofert
+
+/kalkulator.html
+↓
+Kalkulator leasingu / rat
+
+/kontakt.html
+↓
+Formularz kontaktowy
+
+/css/style.css
+/js/script.js
