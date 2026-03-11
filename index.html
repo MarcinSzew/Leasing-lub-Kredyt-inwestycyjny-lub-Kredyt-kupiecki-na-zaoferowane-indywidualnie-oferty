@@ -3,34 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sklep z Laptopami – Strona Główna</title>
+<title>Premium Laptopy i Stacje Robocze – Strona Główna</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9f9f9; }
 h1 { color: #1a3e5c; }
-h2 { color: #2a5d84; margin-top: 20px; }
+h2 { color: #2a5d84; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px;}
 ul { margin-left: 20px; }
+.model { margin-bottom: 25px; border-bottom: 1px solid #ddd; padding-bottom: 15px; background: #fff; padding: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);}
+.specs { font-size: 0.9em; color: #555; }
+.price { font-weight: bold; color: #b12704; }
+img { display: block; margin: 5px 0; max-width: 220px; }
 a { text-decoration: none; color: #1a0dab; }
+nav ul { list-style: none; padding-left: 0; display: flex; gap: 15px; }
+nav li { display: inline-block; }
 iframe { border: 1px solid #ccc; margin-top: 10px; }
-nav ul { list-style: none; padding-left: 0; }
-nav li { margin: 5px 0; }
 </style>
 </head>
 <body>
 
-<h1>Witamy w sklepie z laptopami!</h1>
-<p>Wybierz kategorię lub zobacz wszystkie oferty:</p>
+<h1>Premium Laptopy i Mobilne Stacje Robocze – Oferta Główna</h1>
+<p>Najwyższa jakość dla biznesu, gaming i kreatywnej pracy.</p>
 
 <!-- Menu nawigacyjne -->
 <nav>
-  <ul>
-    <li><a href="kategorie/kategorie.html" target="_blank">📂 Wszystkie kategorie laptopów</a></li>
-    <!-- Możesz dodać kolejne linki np. Alienware, ASUS, Surface -->
-  </ul>
+<ul>
+  <li><a href="#lenovo">Lenovo</a></li>
+  <li><a href="#dell">Dell</a></li>
+  <li><a href="#hp">HP</a></li>
+  <li><a href="#msi">MSI</a></li>
+</ul>
 </nav>
 
-<!-- Podgląd oferty bezpośrednio na stronie -->
-<h2>Podgląd oferty:</h2>
-<iframe src="kategorie/kategorie.html" width="100%" height="2200px"></iframe>
+<!-- Lenovo Premium -->
+<h2 id="lenovo">💻 Lenovo – Premium</h2>
+<ul>
+<li class="model">
+  <strong>ThinkPad X1 Carbon Gen 13</strong><br>
+  <span class="specs">Ultrabook, Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price">Cena: ~15 000 zł</span>
+  <img src="https://laptopfactory.pl/Laptop-Lenovo-ThinkPad-X1-Carbon-Gen9-i7-1185G7-16GB-FHDplus-US(3).JPG" alt="ThinkPad X1 Carbon">
+</li>
+<li class="model">
+  <strong>ThinkPad X1 Yoga</strong><br>
+  <span class="specs">Konwertowalny, Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price">Cena: ~16 500 zł</span>
+</li>
+<li class="model">
+  <strong>ThinkPad P16</strong><br>
+  <span class="specs">Mobilna stacja robocza, Intel i9, 32GB RAM, 1TB SSD, CAD / 3D</span><br>
+  <span class="price">Cena: ~18 500 zł</span>
+</li>
+<li class="model">
+  <strong>Legion 7</strong><br>
+  <span class="specs">Gaming, AMD Ryzen 9, 32GB RAM, RTX 3080, 1TB SSD</span><br>
+  <span class="price">Cena: ~19 000 zł</span>
+</li>
+<li class="model">
+  <strong>Legion 5 Pro</strong><br>
+  <span class="specs">Gaming, AMD Ryzen 7, 32GB RAM, RTX 3070, 1TB SSD</span><br>
+  <span class="price">Cena: ~13 500 zł</span>
+</li>
+</ul>
+
+<!-- Dell Premium -->
+<h2 id="dell">💻 Dell – Premium</h2>
+<ul>
+<li class="model">
+  <strong>XPS 15 OLED</strong><br>
+  <span class="specs">Ultrabook kreatywny, Intel i7, 16GB RAM, OLED 4K</span><br>
+  <span class="price">Cena: ~12 500 zł</span>
+</li>
+<li class="model">
+  <strong>Latitude 7430</strong><br>
+  <span class="specs">Biznesowy, Intel i7, 32GB RAM, 1TB SSD</span><br>
+  <span class="price">Cena: ~11 000 zł</span>
+</li>
+<li class="model">
+  <strong>Precision 17</strong><br>
+  <span class="specs">Mobilna stacja robocza, Intel i9, 64GB RAM, 2TB SSD</span><br>
+  <span class="price">Cena: ~20 000 zł</span>
+</li>
+<li class="model">
+  <strong>Alienware m18</strong><br>
+  <span class="specs">Gaming premium, Intel i9, RTX 4080, 32GB RAM</span><br>
+  <span class="price">Cena: ~24 000 zł</span>
+</li>
+<li class="model">
+  <strong>G15 Gaming</strong><br>
+  <span class="specs">Gaming średnia/premium, Intel i7, RTX 3060, 16GB RAM</span><br>
+  <span class="price">Cena: ~7 500 zł</span>
+</li>
+</ul>
+
+<!-- HP Premium -->
+<h2 id="hp">💻 HP – Premium</h2>
+<ul>
+<li class="model">
+  <strong>Spectre x360</strong><br>
+  <span class="specs">Konwertowalny premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price">Cena: ~9 500 zł</span>
+</li>
+<li class="model">
+  <strong>Omen 17</strong><br>
+  <span class="specs">Gaming, Intel i9, RTX 3070, 32GB RAM</span><br>
+  <span class="price">Cena: ~12 500 zł</span>
+</li>
+<li class="model">
+  <strong>ZBook Fury 17 G9</strong><br>
+  <span class="specs">Mobilna stacja robocza, Intel i9, 64GB RAM, 2TB SSD</span><br>
+  <span class="price">Cena: ~22 000 zł</span>
+</li>
+<li class="model">
+  <strong>EliteBook 850 G10</strong><br>
+  <span class="specs">Biznes premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price">Cena: ~10 500 zł</span>
+</li>
+<li class="model">
+  <strong>Victus 16</strong><br>
+  <span class="specs">Gaming średnia półka, Intel i7, RTX 3060, 16GB RAM</span><br>
+  <span class="price">Cena: ~6 500 zł</span>
+</li>
+</ul>
+
+<!-- MSI Premium -->
+<h2 id="msi">💻 MSI – Premium</h2>
+<ul>
+<li class="model">
+  <strong>MSI Titan 18 HX</strong><br>
+  <span class="specs">Gaming premium, Intel i9, RTX 4090, 32GB RAM</span><br>
+  <span class="price">Cena: ~24 000 zł</span>
+</li>
+<li class="model">
+  <strong>MSI CreatorPro Z16P</strong><br>
+  <span class="specs">Mobilna stacja robocza, Intel i9, 32GB RAM, 1TB SSD</span><br>
+  <span class="price">Cena: ~21 500 zł</span>
+</li>
+<li class="model">
+  <strong>MSI Raider 18 HX</strong><br>
+  <span class="specs">Gaming wysoka półka, Intel i9, RTX 4080</span><br>
+  <span class="price">Cena: ~18 500 zł</span>
+</li>
+<li class="model">
+  <strong>MSI Stealth 17</strong><br>
+  <span class="specs">Gaming ultrabook, Intel i7, RTX 3070, 16GB RAM</span><br>
+  <span class="price">Cena: ~14 500 zł</span>
+</li>
+<li class="model">
+  <strong>MSI Summit E16 AI Evo</strong><br>
+  <span class="specs">Ultrabook premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price">Cena: ~5 998 zł</span>
+</li>
+</ul>
 
 </body>
 </html>
