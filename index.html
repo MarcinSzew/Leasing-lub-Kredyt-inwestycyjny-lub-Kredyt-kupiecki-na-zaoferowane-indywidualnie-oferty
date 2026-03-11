@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +7,84 @@
 
 <title>Portal Premium – Technologie i Finansowanie</title>
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#0b2d4a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+nav{
+background:#163e63;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+section{
+display:none;
+padding:50px;
+max-width:1000px;
+margin:auto;
+}
+
+.active{
+display:block;
+}
+
+.cards{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+width:280px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+background:#0b2d4a;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+footer{
+background:#0b2d4a;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+</style>
 
 </head>
 
@@ -23,42 +99,31 @@
 
 <nav>
 
-<a href="index.html">Strona główna</a>
-<a href="oferty.html">Oferty Premium</a>
-<a href="dodaj-oferte.html">Dodaj ofertę</a>
-<a href="kalkulator.html">Kalkulator</a>
-<a href="kontakt.html">Kontakt</a>
+<a onclick="show('home')">Strona główna</a>
+<a onclick="show('offers')">Oferty Premium</a>
+<a onclick="show('add')">Dodaj ofertę</a>
+<a onclick="show('calc')">Kalkulator</a>
+<a onclick="show('contact')">Kontakt</a>
 
 </nav>
 
 
-<section class="hero">
+<section id="home" class="active">
 
-<h2>Profesjonalne oferty technologiczne</h2>
+<h2>Profesjonalne technologie Premium</h2>
 
 <p>
 
-Laptopy biznesowe • stacje robocze • smartfony gamingowe  
-z finansowaniem leasingowym lub kredytowym.
+Laptopy biznesowe, mobilne stacje robocze oraz smartfony gamingowe
+z możliwością finansowania leasingowego lub kredytowego.
 
 </p>
 
-<a href="oferty.html">
-
-<button class="mainButton">
-Zobacz oferty Premium
-</button>
-
-</a>
-
-</section>
-
-
-<section class="cards">
+<div class="cards">
 
 <div class="card">
 <h3>Laptopy Premium</h3>
-<p>Dell, Lenovo, HP – najwyższa klasa biznesowa</p>
+<p>Dell • Lenovo • HP</p>
 </div>
 
 <div class="card">
@@ -68,16 +133,167 @@ Zobacz oferty Premium
 
 <div class="card">
 <h3>Smartfony gaming</h3>
-<p>np. seria Redmagic dla profesjonalnych graczy</p>
+<p>Nubia Redmagic</p>
+</div>
+
 </div>
 
 </section>
+
+
+
+<section id="offers">
+
+<h2>Oferty Premium</h2>
+
+<div id="offerList"></div>
+
+</section>
+
+
+
+<section id="add">
+
+<h2>Dodaj ofertę Premium</h2>
+
+<form id="offerForm">
+
+<input type="text" id="name" placeholder="Nazwa produktu" required>
+
+<textarea id="desc" placeholder="Opis produktu"></textarea>
+
+<input type="number" id="price" placeholder="Cena">
+
+<button type="submit">Dodaj ofertę</button>
+
+</form>
+
+</section>
+
+
+
+<section id="calc">
+
+<h2>Kalkulator leasingu / kredytu</h2>
+
+<input type="number" id="priceCalc" placeholder="Cena produktu">
+
+<input type="number" id="monthsCalc" placeholder="Liczba rat">
+
+<button onclick="calc()">Oblicz ratę</button>
+
+<p id="result"></p>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Kontakt</h2>
+
+<form>
+
+<input type="text" placeholder="Imię i nazwisko">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Treść wiadomości"></textarea>
+
+<button>Wyślij</button>
+
+</form>
+
+</section>
+
 
 <footer>
 
 © 2026 Portal technologiczno-finansowy Premium
 
 </footer>
+
+
+
+<script>
+
+function show(id){
+
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"))
+
+document.getElementById(id).classList.add("active")
+
+}
+
+
+
+document.getElementById("offerForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let name=document.getElementById("name").value
+
+let desc=document.getElementById("desc").value
+
+let price=document.getElementById("price").value
+
+let offer={name,desc,price}
+
+let offers=JSON.parse(localStorage.getItem("offers"))||[]
+
+offers.push(offer)
+
+localStorage.setItem("offers",JSON.stringify(offers))
+
+loadOffers()
+
+this.reset()
+
+})
+
+
+
+function loadOffers(){
+
+let offers=JSON.parse(localStorage.getItem("offers"))||[]
+
+let list=document.getElementById("offerList")
+
+list.innerHTML=""
+
+offers.forEach(o=>{
+
+let div=document.createElement("div")
+
+div.className="card"
+
+div.innerHTML=
+
+"<h3>"+o.name+"</h3><p>"+o.desc+"</p><b>"+o.price+" zł</b>"
+
+list.appendChild(div)
+
+})
+
+}
+
+loadOffers()
+
+
+
+function calc(){
+
+let price=document.getElementById("priceCalc").value
+
+let months=document.getElementById("monthsCalc").value
+
+let rata=price/months
+
+document.getElementById("result").innerHTML="Rata miesięczna: "+rata+" zł"
+
+}
+
+</script>
 
 </body>
 </html>
