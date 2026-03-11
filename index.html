@@ -18,6 +18,7 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 </style>
 </head>
 <body>
+
 <header>
 <h1>Najwyższej jako 1-ej klasy profesjonalne zarazem luksusowe oferty handlowe dostępne również na raty bez baz itp weryfikacji finansowych</h1>
 </header>
@@ -30,17 +31,7 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 <input id="title">
 
 <label>Kategoria</label>
-<select id="category">
-<option>Elektronika premium</option>
-<option>Audio hi-end</option>
-<option>Zegarki luksusowe</option>
-<option>Moda premium</option>
-<option>Motoryzacja premium</option>
-<option>Sprzęt medyczny premium</option>
-<option>Luksusowe AGD</option>
-<option>Wyposażenie biura premium</option>
-<!-- Dodaj inne kategorie według potrzeb -->
-</select>
+<select id="category"></select>
 
 <label>Link do zdjęcia</label>
 <input id="image">
@@ -65,13 +56,22 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 
 <section>
 <h2>Wyszukiwarka ofert Premium</h2>
-<input id="search" placeholder="Szukaj..." onkeyup="searchOffer()">
+<p>Wpisz krótki opis produktu, który Cię interesuje (np. "luksusowy zegarek", "hi-end audio"):</p>
+<input id="search" placeholder="Wyszukaj produkt lub zapytanie ofertowe..." onkeyup="searchOffer()">
+</section>
+
+<section>
+<h2>Filtr kategorii</h2>
+<select id="filterCategory" onchange="filterOffer()">
+<option value="all">Wszystkie</option>
+</select>
 </section>
 
 <section>
 <h2>Oferty Premium</h2>
 <div id="offers"></div>
 </section>
+
 </main>
 
 <footer>
@@ -82,9 +82,30 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 </footer>
 
 <script>
+// 37 kategorii jak na Alibaba.com
+const categories = [
+"Elektronika","Maszyny przemysłowe","Maszyny budowlane","Maszyny rolnicze","Motoryzacja","Narzędzia","Dom i ogród",
+"Wyposażenie biura","Wyposażenie sklepów","Meble","Oświetlenie","Sprzęt sportowy","Artykuły dziecięce","Zabawki",
+"Odzież i akcesoria","Biżuteria","Torby i walizki","Kosmetyki","Produkty zdrowotne","Artykuły gospodarstwa domowego",
+"Sprzęt AGD","Produkty ogrodowe","Materiały budowlane","Chemia przemysłowa","Surowce","Materiały tekstylne",
+"Opakowania","Produkty spożywcze","Sprzęt gastronomiczny","Systemy bezpieczeństwa","Transport i logistyka",
+"Urządzenia testowe","Usługi produkcyjne","Motoryzacja sportowa","Elektronika luksusowa","Moda luksusowa",
+"Wyposażenie hotelowe","Sprzęt fitness"
+];
+
+// dodaj do selektora kategorii i filtra
+const categorySelect = document.getElementById("category");
+const filterSelect = document.getElementById("filterCategory");
+categories.forEach(cat=>{
+let option1=document.createElement("option");
+option1.text=cat; option1.value=cat; categorySelect.add(option1);
+let option2=document.createElement("option");
+option2.text=cat; option2.value=cat; filterSelect.add(option2);
+});
+
+// oferty
 let offers=[];
 
-// Funkcja dodawania nowej oferty
 function addOffer(){
 let title=document.getElementById("title").value;
 let category=document.getElementById("category").value;
@@ -95,25 +116,21 @@ let params=document.getElementById("params").value;
 let price=document.getElementById("price").value;
 let finance=document.getElementById("finance").value;
 
-if(!title || !category) { alert("Wpisz nazwę produktu i wybierz kategorię."); return; }
+if(!title || !category){ alert("Wpisz nazwę produktu i wybierz kategorię."); return; }
 
 let wholesale=(price*0.7755).toFixed(2);
 let retail=(price*0.84).toFixed(2);
 
-offers.push({
-title, category, image, video, desc, params, price, finance, wholesale, retail
-});
+offers.push({title,category,image,video,desc,params,price,finance,wholesale,retail});
 renderOffers();
 }
 
-// Renderowanie ofert w HTML
 function renderOffers(){
 const container=document.getElementById("offers");
 container.innerHTML="";
 offers.forEach(o=>{
 let div=document.createElement("div");
-div.className="product";
-div.setAttribute("data-category",o.category);
+div.className="product"; div.setAttribute("data-category",o.category);
 div.innerHTML=`
 <h3>${o.title}</h3>
 <p><b>Kategoria:</b> ${o.category}</p>
@@ -130,7 +147,6 @@ container.appendChild(div);
 });
 }
 
-// Wyszukiwarka
 function searchOffer(){
 let input=document.getElementById("search").value.toLowerCase();
 let products=document.getElementsByClassName("product");
@@ -139,6 +155,16 @@ let text=products[i].innerText.toLowerCase();
 products[i].style.display=text.includes(input)?"block":"none";
 }
 }
+
+function filterOffer(){
+let category=document.getElementById("filterCategory").value;
+let products=document.getElementsByClassName("product");
+for(let i=0;i<products.length;i++){
+let cat=products[i].getAttribute("data-category");
+products[i].style.display=(category==="all"||cat===category)?"block":"none";
+}
+}
 </script>
+
 </body>
 </html>
