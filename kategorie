@@ -1,6 +1,38 @@
-repozytorium/
-├─ index.html
-├─ kategorie/
-│   ├─ 01-smartfony.html
-│   ├─ 02-laptopy.html
-│   └─ ... kolejne 37 kategorii
+kategorie/
+├─ 01-smartfony.html
+├─ 02-laptopy.html
+├─ 03-stacje-robocze.html
+├─ 04-komputery-all-in-one.html
+├─ 05-komputery-stacjonarne.html
+├─ 06-monitory.html
+├─ 07-akcesoria-komputerowe.html
+├─ 08-tablety.html
+├─ 09-peryferia.html
+├─ 10-sieci.html
+├─ 11-serwery.html
+├─ 12-dyski.html
+├─ 13-pamięci-ram.html
+├─ 14-karty-graficzne.html
+├─ 15-procesory.html
+├─ 16-plyty-glowne.html
+├─ 17-chlodzenie.html
+├─ 18-obudowy.html
+├─ 19-zasilacze.html
+├─ 20-sieci-wifi.html
+├─ 21-uslugi-chmurowe.html
+├─ 22-software.html
+├─ 23-laptop-accesories.html
+├─ 24-virtual-reality.html
+├─ 25-smart-home.html
+├─ 26-drukarki.html
+├─ 27-scanners.html
+├─ 28-kamery.html
+├─ 29-drony.html
+├─ 30-gaming.html
+├─ 31-audio.html
+├─ 32-video.html
+├─ 33-projekcja.html
+├─ 34-monitoring.html
+├─ 35-robotyka.html
+├─ 36-ai-solutions.html
+├─ 37-other-it-products.html
